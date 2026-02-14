@@ -38,3 +38,19 @@ class Exception3{
         System.out.println("Program continues after handling the exception");
     }
 }
+
+
+class Exception4{
+    public static void main(String[] args) {
+        String str="abc";
+        try{
+            int num=Integer.parseInt(str);
+            System.out.println(num);
+        }
+        catch(NumberFormatException e){
+
+            System.out.println("Cannot convert number into string"+ e.getMessage());
+        }
+        System.out.println("Program continues after handling the exception");
+    }
+}
