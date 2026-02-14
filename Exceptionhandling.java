@@ -54,3 +54,44 @@ class Exception4{
         System.out.println("Program continues after handling the exception");
     }
 }
+
+class Exception5{
+    public static void main(String[] args) {
+        try{
+            int result=10/0;
+        }
+        catch(ArithmeticException e){
+            System.out.println("Caught an Arithmatic expression"+ e.getMessage());
+        }
+        finally{
+            System.out.println("This block will always executes");
+        }
+        System.out.println("Programs Continue after handling the exception");
+    }
+}
+
+
+class Exceptionthrow{
+    public static void main(String[] args) {
+        int a=1;
+        if(a<0){
+            throw new IllegalArgumentException("Value cannot be negative"+a);
+        }
+        System.out.println("Value is"+a);
+    }
+
+}
+
+class Exceptionthrows{
+    public static void main(String[] args){
+        try{
+            methodThatThrowsException();
+        }
+        catch(Exception e){
+            System.out.println("Caught an exception:"+e.getMessage());
+        }
+    }
+    public static void methodThatThrowsException() throws Exception{
+        throw new Exception("This is a custom exception");
+    }
+}
